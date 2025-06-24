@@ -3,8 +3,6 @@ import { Movie, MovieDetails, MovieSearchResponse } from '../types/movie';
 // Use environment variables for API key and base URL
 const API_KEY = import.meta.env.VITE_PUBLIC_OMDB_API_KEY;
 const BASE_URL = `${import.meta.env.VITE_PUBLIC_OMDB_BASE_URL}?apikey=${API_KEY}&`;
-console.log('API_KEY:', API_KEY);
-console.log('BASE_URL:', BASE_URL);
 
 // Demo data for when API key is not available
 const DEMO_MOVIES: Movie[] = [
