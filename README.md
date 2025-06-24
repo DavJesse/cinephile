@@ -28,7 +28,7 @@ Cinephile Movie App is a simple application that allows users to browse movies, 
 1.  Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/DavJesse/cinephile.git
     cd cinephile
     ```
 
@@ -87,4 +87,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [David Jesse Odhiambo](https://david-jesse.vercel.app/)
 
-[Project Link](link-to-your-project)
+[Project Link](https://cinephile-filamu.vercel.app/)
