@@ -151,13 +151,13 @@ export const getTrendingMovies = async (): Promise<Movie[]> => {
   }
 
   // Since OMDB doesn't have a trending endpoint, we'll search for popular movies
-  const trendingQueries = ['batman', 'marvel', 'star wars', 'avengers'];
+  const trendingQueries = ['batman', 'marvel', 'star wars', 'horror', 'comedy', 'drama', 'action'];
   const allMovies: Movie[] = [];
 
   try {
     for (const query of trendingQueries) {
       const movies = await searchMovies(query);
-      allMovies.push(...movies.slice(0, 2)); // Take 2 movies from each search
+      allMovies.push(...movies.slice(0, 3)); // Take 2 movies from each search
     }
     
     // Remove duplicates based on imdbID
@@ -165,7 +165,7 @@ export const getTrendingMovies = async (): Promise<Movie[]> => {
       index === self.findIndex(m => m.imdbID === movie.imdbID)
     );
     
-    return uniqueMovies.slice(0, 8); // Return up to 8 movies
+    return uniqueMovies.slice(0, 20); // Return up to 20 movies
   } catch (error) {
     console.error('Error fetching trending movies:', error);
     return DEMO_MOVIES;
